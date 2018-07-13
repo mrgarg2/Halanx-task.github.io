@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" class="footer-links" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+        integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="./css/style.css">
+
+    <link rel="stylesheet" class="footer-links" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+        crossorigin="anonymous">
+
+    <script src="./bower_components/angular/angular.min.js"></script>
+    <script src="./bower_components/angular-route/angular-route.min.js"></script>
+    <script src="./js/app.js"></script>
+    <script src="./js/controllers/urls.js"></script>
+    <script src="./js/factory.js"></script>
+    <script src="./js/controllers/loginController.js"></script>
+
+</head>
+
+<body ng-app="myapp">
+    <header class="row headerContainer">
+        <div class="col-md-12 tabLink">
+            Halanx Enterprises Inc.
+        </div>
+    </header>
+
+
+    <div class="container" ng-controller="loginCtrl">
+        <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h2>Sign In</h2>
+                    <div style="float:right; font-size: 80%; position: relative; top:-10px">
+                        <a href="#">Forgot password?</a>
+                    </div>
+                </div>
+
+                <div style="padding-top:30px" class="panel-body">
+
+                    <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+
+                    <form id="loginform" class="form-horizontal" role="form" ng-submit="send()">
+
+                        <div style="margin-bottom: 25px" class="input-group">
+                            <!-- <span class="input-group-addon">
+                                <i class="fa fa-envelope"></i>                            
+                            </span> -->
+                            <!-- <span class="input-group-addon">
+                                <i class="glyphicon glyphicon-user"></i>
+                            </span> -->
+                            <input id="login-username" type="text" class="form-control" name="username" value="" placeholder="Username" ng-model="uname">
+                        </div>
+
+                        <div style="margin-bottom: 25px" class="input-group">
+                            <span class="input-group-addon">
+                                <i class="glyphicon glyphicon-lock"></i>
+                            </span>
+                            <input id="login-password" type="password" class="form-control" name="password" placeholder="Enter password" ng-model="pwd">
+                        </div>
+
+
+
+                        <div class="input-group">
+                            <div class="checkbox">
+                                <label>
+                                    <span class="glyphicon glyphicon-envelope"></span>
+                                    <input id="login-remember" type="checkbox" name="remember" value="1"> Remember me
+                                </label>
+                            </div>
+                        </div>
+
+
+                        <div style="margin-top:10px" class="form-group">
+                            <!-- Button -->
+
+                            <div class="col-sm-12 controls">
+                                <button class="btn btn-danger">Login </button>
+                            </div>
+                        </div>
+
+                    </form>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer-section">
+        <div class="row footer-about-section">
+            <div class="col-lg-4">
+                <h2>About Halanx Inc.</h2>
+                <!-- <p>We provde a prestine onterface for retail stores in a given neighbourhood to provide higher level of customer satisfaction. Thereby, making the complete neighbourhood smart. Our interface provide retail stores to be able to seel online and also provide them detailed accounts of the customer visits and their satisfaction levels.</p> -->
+                <p style="padding-right: 10px;">We provide high Quality,Good Looking, Premium interface for retail stores which are ready to use.</p>
+                <h3>Connect With Us!</h3>
+                <div class="social-media-section">
+                    <img src="./images/fb-icon.png" alt="" class="social-media-icon">
+                    <img src="./images/insta-icon.png" alt="" class="social-media-icon">
+                    <img src="./images/twitter-icon.png" alt="" class="social-media-icon">
+                    <img src="./images/linkedin-icon.png" alt="" class="social-media-icon">
+                    <img src="./images/pinterest-icon.png" alt="" class="social-media-icon">
+
+                </div>
+            </div>
+            <div class="col-lg-4 footer-link-section">
+                <h2>Links</h2>
+                <a class="footer-links" href="">About Us</a>
+                <a class="footer-links" href="">Contact</a>
+                <a class="footer-links" href="">FAQ's</a>
+                <a class="footer-links" href="">Community</a>
+                <a class="footer-links" href="">Blog</a>
+                <a class="footer-links" href="">Careers</a>
+
+            </div>
+            <div class="col-lg-4">
+                <h2>Latest Posts</h2>
+                <p>10 new outlets of retail store sare opened in your area</p>
+                <p>Our organisation has spread to 2 new socities</p>
+                <p>Online presence improves business</p>
+                <p>Halanx Enterprises beats Trump</p>
+            </div>
+
+        </div>
+
+
+
+        <div class="copyright-section">
+            <p>© 2018 Halanx Enterprises Inc.</p>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
